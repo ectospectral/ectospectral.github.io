@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav_bar {
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+.nav_bar a {
+    font-size: 24px;
+    text-decoration: none;
+    background-color: white;
+}
+
+#title_name {
+    font-size: 3.5rem;
+
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #5d5d5d;
+}
+
+nav p {
+    font-family: arial;
+    color: deeppink;
+    font-size: 24px;
+    line-height: 55px;
+    float: left;
+    padding: 0px 20px;
+}
+
+nav ul {
+    float: left;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    font-family: arial;
+    color: deeppink;
+    font-size: 18px;
+    padding: 16px 14px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: grey;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #5d5d5d;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 12px 14px;
+}
+
+nav ul li ul li {
+    width: 200px;
+    border-radius: 4px;
+}
+
+nav ul li ul li a:hover {
+    background-color: grey;
+}
+
+.project_card_name  {
+    text-align: left;
+    color: deeppink;
+    font-family: arial;
+}
+
+.project_card_about {
+    text-align: left;
+    color: deeppink;
+    font-family: arial;
+}
+
+.project_page_description {
+    margin-top: 1%;
+    color: deeppink;
+    font-family: arial;
+}
+
+.project_card_name {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.project_card_description {
+    text-align: left;
+    background-color: black;
+}
+
+.project-title {
+    display: block;
+    color: deeppink;
+    font-family: arial;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-right: 400px;
+}
+
+.project_tools {
+       display: block;
+    color: deeppink;
+    font-family: arial;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-right: 400px;
+}
+
+.project-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.project-desc {
+    display: block;
+    color: deeppink;
+    font-family: arial;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+    background-color: black;
+}
+
+.contact-bg h3 {
+    font-family: arial;
+    color: deeppink;
+    text-align: center;
+}
+
+.contact-bg h3 a {
+    color: deeppink;
+}
+
+.contact-bg h3 a:hover {
+    color: white;
+}
+
+
+.main-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.main-text {
+    color: deeppink;
+    font-family: arial;
+    text-align: center;
+    padding: 25px;
+}
+
+.main-footer {
+    color: deeppink;
+    font-family: arial;
+    text-align: center;
+    padding-top: 280px;
+}
