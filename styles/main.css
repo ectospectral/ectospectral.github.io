@@ -143,6 +143,14 @@ nav ul li ul li a:hover {
     width: 50%;
 }
 
+.project-desc a {
+    color: deeppink;
+}
+
+.project-desc a:hover {
+    color: white;
+}
+
 body {
     background-color: black;
 }
