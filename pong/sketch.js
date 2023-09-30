@@ -1,6 +1,7 @@
 let bx, by, bWidth, bHeight;
 let ballSpeedX, ballSpeedY, ballVelocityX, ballVelocityY;
 let player1, player2;
+let score1, score2, scoreCount;
 
 function setup() {
     createCanvas(1000, 1000);
@@ -14,9 +15,13 @@ function setup() {
     ballSpeedY = 5;
     ballVelocityX = random(-ballSpeedX,ballSpeedX);
     ballVelocityY = random(-ballSpeedY,ballSpeedY);
+    
+    score1 = 0;
+    score2 = 0;
+    scoreCount = 0;
 
-    player1 = new Paddle(width * 0.2, height / 2, 87, 83); 
-    player2 = new Paddle(width * 0.8, height / 2, 73, 75); // ChatGPT taught me about keycodes lol
+    player1 = new Paddle(width*.2, height / 2, 87, 83); 
+    player2 = new Paddle(width*.8, height / 2, 73, 75); // ChatGPT taught me about keycodes lol
 }
 
 function draw() {
@@ -33,6 +38,14 @@ function draw() {
     player2.display();
     player2.keyControl();
 
+    fill(color(255, 20 , 147));
+    textSize(50);
+    text(score1, width*.2, height*.2  );
+    fill(color(255, 20 , 147));
+    textSize(50);
+    text(score2, width*.8, height*.2  );
+
+
     bx += ballVelocityX;
     by += ballVelocityY;
 
@@ -40,16 +53,18 @@ function draw() {
     if (bx< player1.localLx + player1.widthP / 2 && by > player1.localLy - player1.heightP / 2 && by < player1.localLy + player1.heightP / 2) {
         if (bx<= player1.localLx + player1.widthP / 2 && bx>= player1.localLx) {
             ballVelocityX *= -1;
+            scoreCount = 1;
         }
     }
 
     if (bx> player2.localLx - player2.widthP / 2 && by > player2.localLy - player2.heightP / 2 && by < player2.localLy + player2.heightP / 2) {
         if (bx>= player2.localLx - player2.widthP / 2 && bx<= player2.localLx) {
             ballVelocityX *= -1;
+            scoreCount = 2;
         }
     }
 
-    if (bx < 0 || bx > width) {
+    if (by > height || bx > width || bx <= 0 || by <= 0) {
 
         //back to the middle
         bx = width / 2;
@@ -58,7 +73,21 @@ function draw() {
         //different vector every time
         ballVelocityX = random(-ballSpeedX,ballSpeedX);
         ballVelocityY = random(-ballSpeedY,ballSpeedY);
+
+        if (scoreCount == 1) {
+            score1++;
+            scoreCount = 0;
+        }
+        if (scoreCount == 2) {
+            score2++;
+            scoreCount = 0;
+        } else {
+            return;
+        }
     }
+
+    console.log(score1);
+    console.log(score2);
 }
 
 class Paddle {
