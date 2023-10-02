@@ -133,6 +133,11 @@ nav ul li ul li a:hover {
     margin-right: auto;
     width: 50%;
 }
+.pixel-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .project-desc {
     display: block;
